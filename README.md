@@ -56,6 +56,8 @@ export default CodeComparisonEditor;
 - 行号显示
 - 差异行的双向复制功能
 - 同步滚动
+- 支持Tab和Enter键操作
+- 跨浏览器兼容性
 
 ## 属性
 
@@ -72,6 +74,45 @@ export default CodeComparisonEditor;
 
 - `getLeftContent()`: 获取左侧编辑器当前内容
 - `getRightContent()`: 获取右侧编辑器当前内容
+
+## 示例场景
+
+### 代码审查工具
+
+```jsx
+<DiffEditor
+  leftText={originalCode}
+  rightText={reviewedCode}
+  leftTitle="原始提交"
+  rightTitle="审查后代码"
+/>
+```
+
+### 版本对比
+
+```jsx
+<DiffEditor
+  leftText={previousVersion}
+  rightText={currentVersion}
+  leftTitle="v1.0.0"
+  rightTitle="v1.0.1"
+/>
+```
+
+## 浏览器兼容性
+
+- Chrome
+- Firefox
+- Safari
+- Edge
+
+## 自定义样式
+
+组件使用CSS Modules，可以通过引入自定义样式表进行覆盖。
+
+## 贡献指南
+
+欢迎提交问题和拉取请求。
 
 ## 许可证
 
